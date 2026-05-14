@@ -40,4 +40,14 @@ npm run build
 
 ## GitHub Actions
 
-This repository includes a GitHub Actions workflow (`.github/workflows/build.yml`) that automatically installs dependencies, lints, and builds the application on pushes and pull requests to the main branch.
+This repository includes two GitHub Actions workflows:
+1. `.github/workflows/build.yml`: Automatically installs dependencies, lints, and builds the web application on pushes to the main branch.
+2. `.github/workflows/android-build.yml`: Builds an Android APK using Capacitor and uploads it as an artifact whenever code is merged to main.
+
+### Generating the Android APK
+
+1. Go to the "Actions" tab in your GitHub repository.
+2. Select the "Build Android APK" workflow.
+3. Once the workflow is completed, click on the workflow run.
+4. Scroll down to the "Artifacts" section to download the `app-debug.apk` file.
+5. Transfer the `.apk` file to your Android device and install it.
