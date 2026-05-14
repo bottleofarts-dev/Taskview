@@ -33,7 +33,8 @@ jobs:
           java-version: '21'
           
       - name: Sync Capacitor
-        run: npx cap sync android
+        run: |
+          if [ ! -d "android" ]; then npx cap add android; else npx cap sync android; fi
         
       - name: Build APK
         working-directory: ./android
