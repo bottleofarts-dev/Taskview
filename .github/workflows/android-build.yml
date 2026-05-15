@@ -41,6 +41,8 @@ jobs:
 
       - name: Generate Assets
         run: |
+          mkdir -p assets
+          curl -sS -o assets/icon.png https://i.ibb.co/Nd9FZ8Px/Canvas-23.png
           npm install -g @capacitor/assets
           npx capacitor-assets generate --android
 
